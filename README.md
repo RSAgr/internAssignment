@@ -1,7 +1,7 @@
 #  Dashboard Application
 
 <div align="center">
-  <img src="https://github.com/matiassingers/awesome-readme/raw/master/icon.png" alt="Awesome README" width="150" align="right" style="margin-left: 20px;"/>
+  <img src="https://github.com/matiassingers/awesome-readme/raw/master/icon.png" alt="Awesome README" width="144" align="right" style="margin-left: 20px;"/>
 </div>
 
 A modern, responsive Customer Relationship Management (CRM) dashboard built with React, Redux Toolkit, and Chart.js. This application provides comprehensive product management capabilities with real-time analytics and beautiful visualizations.
