@@ -1,5 +1,46 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { isTokenExpired } from '../utils/tokenUtils';
+
+// Helper functions for localStorage
+const loadAuthFromStorage = () => {
+  try {
+    const serializedAuth = localStorage.getItem('auth');
+    if (serializedAuth === null) {
+      return { user: null, token: null };
+    }
+    
+    const authData = JSON.parse(serializedAuth);
+    
+    // Check if token is expired
+    if (authData.token && isTokenExpired(authData.token)) {
+      // Token is expired, clear storage and return null
+      localStorage.removeItem('auth');
+      return { user: null, token: null };
+    }
+    
+    return authData;
+  } catch {
+    return { user: null, token: null };
+  }
+};
+
+const saveAuthToStorage = (user, token) => {
+  try {
+    const authData = { user, token };
+    localStorage.setItem('auth', JSON.stringify(authData));
+  } catch (err) {
+    console.error('Could not save auth to localStorage:', err);
+  }
+};
+
+const removeAuthFromStorage = () => {
+  try {
+    localStorage.removeItem('auth');
+  } catch (err) {
+    console.error('Could not remove auth from localStorage:', err);
+  }
+};
 
 export const loginUser = createAsyncThunk(
   'auth/loginUser',
@@ -16,11 +57,14 @@ export const loginUser = createAsyncThunk(
   }
 );
 
+// Load initial state from localStorage
+const initialAuthState = loadAuthFromStorage();
+
 const authSlice = createSlice({
   name: 'auth',
   initialState: {
-    user: null,
-    token: null,
+    user: initialAuthState.user,
+    token: initialAuthState.token,
     loading: false,
     error: null,
   },
@@ -28,6 +72,10 @@ const authSlice = createSlice({
     logout: (state) => {
       state.user = null;
       state.token = null;
+      removeAuthFromStorage();
+    },
+    clearError: (state) => {
+      state.error = null;
     },
   },
   extraReducers: (builder) => {
@@ -40,6 +88,8 @@ const authSlice = createSlice({
         state.loading = false;
         state.user = action.payload;
         state.token = action.payload.accessToken;
+        // Save to localStorage
+        saveAuthToStorage(action.payload, action.payload.accessToken);
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.loading = false;
@@ -48,5 +98,5 @@ const authSlice = createSlice({
   },
 });
 
-export const { logout } = authSlice.actions;
+export const { logout, clearError } = authSlice.actions;
 export default authSlice.reducer;
