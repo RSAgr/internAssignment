@@ -1,4 +1,4 @@
-# 🚀 Dashboard Application
+#  Dashboard Application
 
 A modern, responsive Customer Relationship Management (CRM) dashboard built with React, Redux Toolkit, and Chart.js. This application provides comprehensive product management capabilities with real-time analytics and beautiful visualizations.
 
@@ -7,16 +7,16 @@ A modern, responsive Customer Relationship Management (CRM) dashboard built with
 ![Redux](https://img.shields.io/badge/Redux-Toolkit-764ABC?style=for-the-badge&logo=redux)
 ![Vite](https://img.shields.io/badge/Vite-7.0.5-646CFF?style=for-the-badge&logo=vite)
 
-## ✨ Features
+##  Features
 
-### 🔐 Authentication System
+###  Authentication System
 - **Secure Login**: Token-based authentication with Redux state management
 - **Beautiful UI**: Glassmorphism design with gradient backgrounds
 - **Protected Routes**: Private route protection for authenticated users
 
 Note: Due to dummy login, we have set a demo credential for default login. More such credentials can be found from the dummy api
 
-### 📊 Interactive Dashboard
+###  Interactive Dashboard
 - **Real-time Analytics**: Live data visualization with Chart.js integration
 - **Multiple Chart Types**: 
   - Line charts for sales & revenue trends
@@ -25,7 +25,7 @@ Note: Due to dummy login, we have set a demo credential for default login. More 
 - **Statistics Cards**: Key metrics overview (Total Revenue, Customers, Sales, Products)
 - **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
 
-### 🛍️ Product Management (CRUD)
+###  Product Management (CRUD)
 - **Complete CRUD Operations**: Create, Read, Update, Delete products
 - **Smart Pricing System**: 
   - Dynamic price calculations with discount support
@@ -36,13 +36,13 @@ Note: Due to dummy login, we have set a demo credential for default login. More 
 - **Local & API Integration**: Hybrid system supporting both local and API products
 - **Visual Indicators**: Special badges for newly added products
 
-### 🎨 Modern UI/UX
+###  Modern UI/UX
 - **Responsive Tables**: Mobile-friendly with horizontal scrolling
 - **Interactive Elements**: Hover effects and smooth transitions
 - **Professional Styling**: Clean, modern interface with consistent design
 - **Status Indicators**: Color-coded stock levels and status badges
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Frontend
 - **React 19.1.0** - Modern React with latest features
@@ -55,7 +55,7 @@ Note: Due to dummy login, we have set a demo credential for default login. More 
 ### External APIs
 - **DummyJSON API** - Mock data for products, users, and carts
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - Node.js (version 16 or higher)
@@ -94,7 +94,7 @@ npm run build
 npm run preview
 ```
 
-## 📱 Usage
+##  Usage
 
 ### Login
 - Use any valid credentials from DummyJSON API
@@ -130,7 +130,7 @@ npm run preview
 // - Brand
 ```
 
-## 🏗️ Project Structure
+##  Project Structure
 
 ```
 src/
@@ -171,7 +171,7 @@ VITE_API_BASE_URL=https://dummyjson.com
 - `DELETE /products/:id` - Delete product
 - `GET /users` - Fetch users for dashboard analytics
 
-## 🎯 Key Features Explained
+##  Key Features Explained
 
 ### 1. Authentication Flow
 ```mermaid
@@ -192,7 +192,7 @@ D --> E[Protected Dashboard Access]
 - **Chart Integration**: Multiple chart types for different data visualizations
 - **Responsive Design**: Charts adapt to different screen sizes
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -200,22 +200,22 @@ D --> E[Protected Dashboard Access]
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📝 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👥 Author
+##  Author
 
 **RSAgr** - [GitHub Profile](https://github.com/RSAgr)
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - [DummyJSON](https://dummyjson.com/) for providing mock API data
 - [Chart.js](https://www.chartjs.org/) for beautiful chart visualizations
 - [React](https://reactjs.org/) team for the amazing framework
 - [Redux Toolkit](https://redux-toolkit.js.org/) for simplified state management
 
-## 📈 Future Enhancements
+##  Future Enhancements
 
 - [ ] Real backend integration
 - [ ] Advanced filtering and sorting

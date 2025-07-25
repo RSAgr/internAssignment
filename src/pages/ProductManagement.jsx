@@ -16,7 +16,7 @@ const ProductManagement = () => {
   const [totalProducts, setTotalProducts] = useState(0);
   const [localProducts, setLocalProducts] = useState([]); // Track locally added products
   const [nextLocalId, setNextLocalId] = useState(1001); // Start local IDs from 1001
-  const productsPerPage = 10;
+  const productsPerPage = 6;
 
   const [formData, setFormData] = useState({
     title: '',
