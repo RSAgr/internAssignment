@@ -421,7 +421,7 @@ const Dashboard = () => {
                   plugins: {
                     legend: {
                       position: 'bottom',
-                      align: 'start',
+                      align: 'center',
                       labels: {
                         usePointStyle: true,
                         pointStyle: 'circle',
