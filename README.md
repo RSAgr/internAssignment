@@ -221,7 +221,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ##  Future Enhancements
 
-- [ ] Real backend integration
+- [ ] Allowing users to refresh login through refresh token
 - [ ] Advanced filtering and sorting
 - [ ] Export functionality (PDF, CSV)
 - [ ] Dark mode theme
